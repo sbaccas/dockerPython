@@ -1,0 +1,16 @@
+{
+  "siteConfig": {
+    "linuxFxVersion": "DOCKER|shanesdocker.azurecr.io/azurefunctionsimage:v1.0.0",
+    "acrUseManagedIdentityCreds": true,
+    "acrUserManagedIdentityID": "/subscriptions/c130cab9-b754-4ad5-a6c1-36bda11d6316/resourcegroups/AzureFunctionsContainers-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/func-container-identity"
+  },
+  "properties": {
+    "siteConfig": null,
+    "appSettings": [
+      {
+        "name": "DOCKER_REGISTRY_SERVER_URL",
+        "value": "https://shanesdocker.azurecr.io"
+      }
+    ]
+  }
+}

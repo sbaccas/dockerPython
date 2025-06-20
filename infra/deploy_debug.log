@@ -1,0 +1,166 @@
+DEBUG: cli.knack.cli: Command arguments: ['deployment', 'group', 'create', '--resource-group', 'azFunc-rgJun19', '--template-file', 'azfunction.json', '--parameters', 'appName=dkPythnJn19try2', 'acrUsername=shanesdocker', 'acrPassword=cA/Q8ZdxxRpZnSQPeTU/CmqsqFb1SmlBw0SxDkrvrf+ACRDTDNRy', 'acrServer=shanesdocker.azurecr.io', 'imageName=shanesdocker.azurecr.io/dockerPython:latest', '--debug']
+DEBUG: cli.knack.cli: __init__ debug log:
+Cannot enable color.
+DEBUG: cli.knack.cli: Event: Cli.PreExecute []
+DEBUG: cli.knack.cli: Event: CommandParser.OnGlobalArgumentsCreate [<function CLILogging.on_global_arguments at 0x7bbdfff27880>, <function OutputProducer.on_global_arguments at 0x7bbdffc827a0>, <function CLIQuery.on_global_arguments at 0x7bbdffcc7ce0>]
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreCommandTableCreate []
+DEBUG: cli.azure.cli.core: Modules found from index for 'deployment': ['azure.cli.command_modules.resource']
+DEBUG: cli.azure.cli.core: Loading command modules:
+DEBUG: cli.azure.cli.core: Name                  Load Time    Groups  Commands
+DEBUG: cli.azure.cli.core: resource                  0.109        52       232
+DEBUG: cli.azure.cli.core: Total (1)                 0.109        52       232
+DEBUG: cli.azure.cli.core: These extensions are not installed and will be skipped: ['azext_ai_examples', 'azext_next']
+DEBUG: cli.azure.cli.core: Loading extensions:
+DEBUG: cli.azure.cli.core: Name                  Load Time    Groups  Commands  Directory
+DEBUG: cli.azure.cli.core: Total (0)                 0.000         0         0  
+DEBUG: cli.azure.cli.core: Loaded 52 groups, 232 commands.
+DEBUG: cli.azure.cli.core: Found a match in the command table.
+DEBUG: cli.azure.cli.core: Raw command  : deployment group create
+DEBUG: cli.azure.cli.core: Command table: deployment group create
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreCommandTableTruncate [<function AzCliLogging.init_command_file_logging at 0x7bbdfee38180>]
+DEBUG: cli.azure.cli.core.azlogging: metadata file logging enabled - writing logs to '/home/baccassh/.azure/commands/2025-06-18.21-16-47.deployment_group_create.212975.log'.
+INFO: az_command_data_logger: command args: deployment group create --resource-group {} --template-file {} --parameters {} {} {} {} {} --debug
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreArgumentLoad [<function register_global_subscription_argument.<locals>.add_subscription_parameter at 0x7bbdfee8ee80>]
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostArgumentLoad []
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostCommandTableCreate [<function register_ids_argument.<locals>.add_ids_arguments at 0x7bbdfee8ef20>, <function register_cache_arguments.<locals>.add_cache_arguments at 0x7bbdfee8f060>, <function register_upcoming_breaking_change_info.<locals>.update_breaking_change_info at 0x7bbdfee8f100>]
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnCommandTableLoaded []
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreParseArgs []
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostParseArgs [<function OutputProducer.handle_output_argument at 0x7bbdffc82840>, <function CLIQuery.handle_query_parameter at 0x7bbdffcc7d80>, <function register_ids_argument.<locals>.parse_ids_arguments at 0x7bbdfee8efc0>]
+DEBUG: cli.azure.cli.core.util: attempting to read file azfunction.json as utf-8-sig
+DEBUG: cli.azure.cli.core.util: invalid syntax (<unknown>, line 1)
+DEBUG: cli.azure.cli.core.util: invalid syntax (<unknown>, line 1)
+DEBUG: cli.azure.cli.core.util: invalid syntax (<unknown>, line 1)
+DEBUG: cli.azure.cli.core.util: invalid syntax (<unknown>, line 1)
+DEBUG: cli.azure.cli.core.util: invalid syntax (<unknown>, line 1)
+DEBUG: cli.azure.cli.core.commands.client_factory: Getting management service client client_type=ResourceManagementClient
+DEBUG: cli.azure.cli.core.auth.persistence: build_persistence: location='/home/baccassh/.azure/msal_token_cache.json', encrypt=False
+DEBUG: cli.azure.cli.core.auth.binary_cache: load: /home/baccassh/.azure/msal_http_cache.bin
+DEBUG: urllib3.util.retry: Converted retries value: 1 -> Retry(total=1, connect=None, read=None, redirect=None, status=None)
+DEBUG: msal.authority: Initializing with Entra authority: https://login.microsoftonline.com/ce7c4cfd-5e70-448f-a5dd-a4a214574c73
+DEBUG: msal.authority: openid_config("https://login.microsoftonline.com/ce7c4cfd-5e70-448f-a5dd-a4a214574c73/v2.0/.well-known/openid-configuration") = {'token_endpoint': 'https://login.microsoftonline.com/ce7c4cfd-5e70-448f-a5dd-a4a214574c73/oauth2/v2.0/token', 'token_endpoint_auth_methods_supported': ['client_secret_post', 'private_key_jwt', 'client_secret_basic'], 'jwks_uri': 'https://login.microsoftonline.com/ce7c4cfd-5e70-448f-a5dd-a4a214574c73/discovery/v2.0/keys', 'response_modes_supported': ['query', 'fragment', 'form_post'], 'subject_types_supported': ['pairwise'], 'id_token_signing_alg_values_supported': ['RS256'], 'response_types_supported': ['code', 'id_token', 'code id_token', 'id_token token'], 'scopes_supported': ['openid', 'profile', 'email', 'offline_access'], 'issuer': 'https://login.microsoftonline.com/ce7c4cfd-5e70-448f-a5dd-a4a214574c73/v2.0', 'request_uri_parameter_supported': False, 'userinfo_endpoint': 'https://graph.microsoft.com/oidc/userinfo', 'authorization_endpoint': 'https://login.microsoftonline.com/ce7c4cfd-5e70-448f-a5dd-a4a214574c73/oauth2/v2.0/authorize', 'device_authorization_endpoint': 'https://login.microsoftonline.com/ce7c4cfd-5e70-448f-a5dd-a4a214574c73/oauth2/v2.0/devicecode', 'http_logout_supported': True, 'frontchannel_logout_supported': True, 'end_session_endpoint': 'https://login.microsoftonline.com/ce7c4cfd-5e70-448f-a5dd-a4a214574c73/oauth2/v2.0/logout', 'claims_supported': ['sub', 'iss', 'cloud_instance_name', 'cloud_instance_host_name', 'cloud_graph_host_name', 'msgraph_host', 'aud', 'exp', 'iat', 'auth_time', 'acr', 'nonce', 'preferred_username', 'name', 'tid', 'ver', 'at_hash', 'c_hash', 'email'], 'kerberos_endpoint': 'https://login.microsoftonline.com/ce7c4cfd-5e70-448f-a5dd-a4a214574c73/kerberos', 'tenant_region_scope': 'NA', 'cloud_instance_name': 'microsoftonline.com', 'cloud_graph_host_name': 'graph.windows.net', 'msgraph_host': 'graph.microsoft.com', 'rbac_url': 'https://pas.windows.net'}
+DEBUG: msal.application: Broker enabled? None
+DEBUG: cli.azure.cli.core.auth.credential_adaptor: CredentialAdaptor.get_token_info: scopes=('https://management.core.windows.net//.default',), options={}
+DEBUG: cli.azure.cli.core.auth.msal_credentials: UserCredential.acquire_token: scopes=['https://management.core.windows.net//.default'], claims_challenge=None, kwargs={}
+DEBUG: msal.application: Cache hit an AT
+DEBUG: msal.telemetry: Generate or reuse correlation_id: 8d5a4ab4-ef3c-43e5-aa5b-474fb68f3ded
+DEBUG: cli.azure.cli.core.sdk.policies: Request URL: 'https://management.azure.com/subscriptions/c130cab9-b754-4ad5-a6c1-36bda11d6316/resourcegroups/azFunc-rgJun19/providers/Microsoft.Resources/deployments/azfunction/validate?api-version=2024-11-01'
+DEBUG: cli.azure.cli.core.sdk.policies: Request method: 'POST'
+DEBUG: cli.azure.cli.core.sdk.policies: Request headers:
+DEBUG: cli.azure.cli.core.sdk.policies:     'Content-Type': 'application/json'
+DEBUG: cli.azure.cli.core.sdk.policies:     'Content-Length': '6984'
+DEBUG: cli.azure.cli.core.sdk.policies:     'Accept': 'application/json'
+DEBUG: cli.azure.cli.core.sdk.policies:     'x-ms-client-request-id': '11d7f172-4cab-11f0-ae2a-00155d4b24e3'
+DEBUG: cli.azure.cli.core.sdk.policies:     'CommandName': 'deployment group create'
+DEBUG: cli.azure.cli.core.sdk.policies:     'ParameterSetName': '--resource-group --template-file --parameters --debug'
+DEBUG: cli.azure.cli.core.sdk.policies:     'User-Agent': 'AZURECLI/2.74.0 (DEB) azsdk-python-core/1.31.0 Python/3.12.10 (Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39)'
+DEBUG: cli.azure.cli.core.sdk.policies:     'Authorization': '*****'
+DEBUG: cli.azure.cli.core.sdk.policies: Request body:
+DEBUG: cli.azure.cli.core.sdk.policies: {"properties": {"template": "{\n  \"$schema\": \"https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#\",\n  \"contentVersion\": \"1.0.0.0\",\n  \"parameters\": {\n    \"acrPassword\": {\n      \"type\": \"string\"\n    },\n    \"acrServer\": {\n      \"type\": \"string\"\n    },\n    \"acrUsername\": {\n      \"type\": \"string\"\n    },\n    \"appInsightsLocation\": {\n      \"defaultValue\": \"[resourceGroup().location]\",\n      \"metadata\": {\n        \"description\": \"Location for Application Insights\"\n      },\n      \"type\": \"string\"\n    },\n    \"appName\": {\n      \"type\": \"string\",\n      \"defaultValue\": \"[concat('skyfnapp', uniqueString(resourceGroup().id))]\",\n      \"metadata\": {\n        \"description\": \"The name of the function app that you wish to create.\"\n      }\n    },\n    \"imageName\": {\n      \"type\": \"string\",\n      \"metadata\": {\n        \"description\": \"Fully qualified image name including registry URL, repository, and tag.\"\n      }\n    },\n    \"location\": {\n      \"type\": \"string\",\n      \"defaultValue\": \"[resourceGroup().location]\",\n      \"metadata\": {\n        \"description\": \"Location for all resources.\"\n      }\n    },\n    \"storageAccountType\": {\n      \"type\": \"string\",\n      \"allowedValues\": [\n        \"Standard_LRS\",\n        \"Standard_GRS\",\n        \"Standard_RAGRS\"\n      ],\n      \"defaultValue\": \"Standard_LRS\",\n      \"metadata\": {\n        \"description\": \"Storage Account type\"\n      }\n    }\n  },\n  \"variables\": {\n    \"applicationInsightsName\": \"[concat('AppInsights-', parameters('appName'))]\",\n    \"hostingPlanName\": \"[concat('AppPlan', parameters('appName'))]\",\n    \"storageAccountName\": \"[concat('fnstorage', uniquestring(resourceGroup().id))]\",\n    \"functionAppName\": \"[parameters('appName')]\"\n  },\n  \"resources\": [\n    {\n      \"type\": \"Microsoft.Storage/storageAccounts\",\n      \"apiVersion\": \"2019-06-01\",\n      \"kind\": \"Storage\",\n      \"location\": \"[parameters('location')]\",\n      \"name\": \"[variables('storageAccountName')]\",\n      \"sku\": {\n        \"name\": \"[parameters('storageAccountType')]\"\n      }\n    },\n    {\n      \"type\": \"Microsoft.Web/serverfarms\",\n      \"apiVersion\": \"2021-02-01\",\n      \"kind\": \"app,linux\",\n      \"location\": \"[parameters('location')]\",\n      \"name\": \"[variables('hostingPlanName')]\",\n      \"properties\": {\n        \"name\": \"[variables('hostingPlanName')]\",\n        \"maximumElasticWorkerCount\": 20,\n        \"reserved\": true\n      },\n      \"sku\": {\n        \"capacity\": 1,\n        \"family\": \"EP\",\n        \"name\": \"EP1\",\n        \"size\": \"EP1\",\n        \"tier\": \"ElasticPremium\"\n      }\n    },\n    {\n      \"type\": \"Microsoft.Web/sites\",\n      \"apiVersion\": \"2020-06-01\",\n      \"dependsOn\": [\n        \"[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]\",\n        \"[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]\"\n      ],\n      \"identity\": {\n        \"type\": \"SystemAssigned\"\n      },\n      \"kind\": \"functionapp\",\n      \"location\": \"[parameters('location')]\",\n      \"name\": \"[variables('functionAppName')]\",\n      \"properties\": {\n        \"serverFarmId\": \"[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]\",\n        \"siteConfig\": {\n          \"appSettings\": [\n            {\n              \"name\": \"APPINSIGHTS_INSTRUMENTATIONKEY\",\n              \"value\": \"[reference(resourceId('microsoft.insights/components', variables('applicationInsightsName')), '2020-02-02-preview').InstrumentationKey]\"\n            },\n            {\n              \"name\": \"AzureWebJobsStorage\",\n              \"value\": \"[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';EndpointSuffix=', environment().suffixes.storage, ';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-06-01').keys[0].value)]\"\n            },\n            {\n              \"name\": \"DOCKER_CUSTOM_IMAGE_NAME\",\n              \"value\": \"[parameters('imageName')]\"\n            },\n            {\n              \"name\": \"DOCKER_REGISTRY_SERVER_PASSWORD\",\n              \"value\": \"[parameters('acrPassword')]\"\n            },\n            {\n              \"name\": \"DOCKER_REGISTRY_SERVER_URL\",\n              \"value\": \"[concat('https://', parameters('acrServer'))]\"\n            },\n            {\n              \"name\": \"DOCKER_REGISTRY_SERVER_USERNAME\",\n              \"value\": \"[parameters('acrUsername')]\"\n            },\n            {\n              \"name\": \"FUNCTION_APP_EDIT_MODE\",\n              \"value\": \"readOnly\"\n            },\n            {\n              \"name\": \"FUNCTIONS_EXTENSION_VERSION\",\n              \"value\": \"~3\"\n            },\n            {\n              \"name\": \"WEBSITE_CONTENTAZUREFILECONNECTIONSTRING\",\n              \"value\": \"[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';EndpointSuffix=', environment().suffixes.storage, ';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-06-01').keys[0].value)]\"\n            },\n            {\n              \"name\": \"WEBSITE_CONTENTSHARE\",\n              \"value\": \"[toLower(parameters('appName'))]\"\n            },\n            {\n              \"name\": \"WEBSITES_ENABLE_APP_SERVICE_STORAGE\",\n              \"value\": \"false\"\n            },\n            {\n              \"name\": \"SKYRISE_RG\",\n              \"value\": \"[resourceGroup().name]\"\n            },\n            {\n              \"name\": \"SKYRISE_SUB_ID\",\n              \"value\": \"[subscription().subscriptionId]\"\n            }\n          ],\n          \"linuxFxVersion\": \"[concat('DOCKER|', parameters('imageName'))]\"\n        }\n      }\n    },\n    {\n      \"type\": \"microsoft.insights/components\",\n      \"apiVersion\": \"2020-02-02-preview\",\n      \"location\": \"[parameters('appInsightsLocation')]\",\n      \"name\": \"[variables('applicationInsightsName')]\",\n      \"properties\": {\n        \"ApplicationId\": \"[variables('applicationInsightsName')]\",\n        \"Request_Source\": \"IbizaWebAppExtensionCreate\"\n      },\n      \"tags\": {\n        \"[concat('hidden-link:', resourceId('Microsoft.Web/sites', variables('applicationInsightsName')))]\": \"Resource\"\n      }\n    }\n  ]\n}\n", "parameters": {"appName": {"value": "dkPythnJn19try2"}, "acrUsername": {"value": "shanesdocker"}, "acrPassword": {"value": "cA/Q8ZdxxRpZnSQPeTU/CmqsqFb1SmlBw0SxDkrvrf+ACRDTDNRy"}, "acrServer": {"value": "shanesdocker.azurecr.io"}, "imageName": {"value": "shanesdocker.azurecr.io/dockerPython:latest"}}, "mode": "Incremental"}}
+DEBUG: cli.azure.cli.command_modules.resource.custom: HTTP content is being overwritten to preserve template whitepace accurately. The request body logging may not accurately represent this.
+DEBUG: urllib3.connectionpool: Starting new HTTPS connection (1): management.azure.com:443
+DEBUG: urllib3.connectionpool: https://management.azure.com:443 "POST /subscriptions/c130cab9-b754-4ad5-a6c1-36bda11d6316/resourcegroups/azFunc-rgJun19/providers/Microsoft.Resources/deployments/azfunction/validate?api-version=2024-11-01 HTTP/1.1" 404 106
+DEBUG: cli.azure.cli.core.sdk.policies: Response status: 404
+DEBUG: cli.azure.cli.core.sdk.policies: Response headers:
+DEBUG: cli.azure.cli.core.sdk.policies:     'Cache-Control': 'no-cache'
+DEBUG: cli.azure.cli.core.sdk.policies:     'Pragma': 'no-cache'
+DEBUG: cli.azure.cli.core.sdk.policies:     'Content-Length': '106'
+DEBUG: cli.azure.cli.core.sdk.policies:     'Content-Type': 'application/json; charset=utf-8'
+DEBUG: cli.azure.cli.core.sdk.policies:     'Expires': '-1'
+DEBUG: cli.azure.cli.core.sdk.policies:     'x-ms-failure-cause': 'gateway'
+DEBUG: cli.azure.cli.core.sdk.policies:     'x-ms-ratelimit-remaining-subscription-writes': '199'
+DEBUG: cli.azure.cli.core.sdk.policies:     'x-ms-ratelimit-remaining-subscription-global-writes': '2999'
+DEBUG: cli.azure.cli.core.sdk.policies:     'x-ms-request-id': 'ada0932d-4571-4b61-8cd1-f01f9e7b060c'
+DEBUG: cli.azure.cli.core.sdk.policies:     'x-ms-correlation-request-id': 'ada0932d-4571-4b61-8cd1-f01f9e7b060c'
+DEBUG: cli.azure.cli.core.sdk.policies:     'x-ms-routing-request-id': 'CANADACENTRAL:20250619T011647Z:ada0932d-4571-4b61-8cd1-f01f9e7b060c'
+DEBUG: cli.azure.cli.core.sdk.policies:     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
+DEBUG: cli.azure.cli.core.sdk.policies:     'X-Content-Type-Options': 'nosniff'
+DEBUG: cli.azure.cli.core.sdk.policies:     'X-Cache': 'CONFIG_NOCACHE'
+DEBUG: cli.azure.cli.core.sdk.policies:     'X-MSEdge-Ref': 'Ref A: 805067A64674462DBA6031E5AECD0F93 Ref B: YTO221090813031 Ref C: 2025-06-19T01:16:47Z'
+DEBUG: cli.azure.cli.core.sdk.policies:     'Date': 'Thu, 19 Jun 2025 01:16:46 GMT'
+DEBUG: cli.azure.cli.core.sdk.policies: Response content:
+DEBUG: cli.azure.cli.core.sdk.policies: Body is streamable
+DEBUG: cli.azure.cli.core.azclierror: Traceback (most recent call last):
+  File "/opt/az/lib/python3.12/site-packages/azure/cli/command_modules/resource/custom.py", line 649, in _deploy_arm_template_at_resource_group
+    validation_poller = mgmt_client.begin_validate(resource_group_name, deployment_name, deployment)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.12/site-packages/azure/core/tracing/decorator.py", line 94, in wrapper_use_tracer
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.12/site-packages/azure/mgmt/resource/resources/v2024_11_01/operations/_operations.py", line 7405, in begin_validate
+    raw_result = self._validate_initial(
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.12/site-packages/azure/mgmt/resource/resources/v2024_11_01/operations/_operations.py", line 7300, in _validate_initial
+    map_error(status_code=response.status_code, response=response, error_map=error_map)
+  File "/opt/az/lib/python3.12/site-packages/azure/core/exceptions.py", line 161, in map_error
+    raise error
+azure.core.exceptions.ResourceNotFoundError: (ResourceGroupNotFound) Resource group 'azFunc-rgJun19' could not be found.
+Code: ResourceGroupNotFound
+Message: Resource group 'azFunc-rgJun19' could not be found.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/az/lib/python3.12/site-packages/azure/cli/core/commands/__init__.py", line 703, in _run_job
+    result = cmd_copy(params)
+             ^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.12/site-packages/azure/cli/core/commands/__init__.py", line 336, in __call__
+    return self.handler(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.12/site-packages/azure/cli/core/commands/command_operation.py", line 120, in handler
+    return op(**command_args)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.12/site-packages/azure/cli/command_modules/resource/custom.py", line 606, in deploy_arm_template_at_resource_group
+    return _deploy_arm_template_at_resource_group(cmd=cmd,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.12/site-packages/azure/cli/command_modules/resource/custom.py", line 651, in _deploy_arm_template_at_resource_group
+    err_message = _build_http_response_error_message(err)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.12/site-packages/azure/cli/command_modules/resource/_utils.py", line 90, in _build_http_response_error_message
+    error_txt = http_error.response.internal_response.text
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.12/site-packages/requests/models.py", line 926, in text
+    if not self.content:
+           ^^^^^^^^^^^^
+  File "/opt/az/lib/python3.12/site-packages/requests/models.py", line 897, in content
+    raise RuntimeError("The content for this response was already consumed")
+RuntimeError: The content for this response was already consumed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/az/lib/python3.12/site-packages/azure/cli/core/commands/arm.py", line 109, in handle_template_based_exception
+    raise CLIError(ex.inner_exception.error.message)
+                   ^^^^^^^^^^^^^^^^^^
+AttributeError: 'RuntimeError' object has no attribute 'inner_exception'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/az/lib/python3.12/site-packages/knack/cli.py", line 233, in invoke
+    cmd_result = self.invocation.execute(args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.12/site-packages/azure/cli/core/commands/__init__.py", line 666, in execute
+    raise ex
+  File "/opt/az/lib/python3.12/site-packages/azure/cli/core/commands/__init__.py", line 734, in _run_jobs_serially
+    results.append(self._run_job(expanded_arg, cmd_copy))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.12/site-packages/azure/cli/core/commands/__init__.py", line 726, in _run_job
+    return cmd_copy.exception_handler(ex)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.12/site-packages/azure/cli/core/commands/arm.py", line 114, in handle_template_based_exception
+    raise CLIError(ex)
+knack.util.CLIError: The content for this response was already consumed
+
+ERROR: cli.azure.cli.core.azclierror: The content for this response was already consumed
+ERROR: az_command_data_logger: The content for this response was already consumed
+DEBUG: cli.knack.cli: Event: Cli.PostExecute [<function AzCliLogging.deinit_cmd_metadata_logging at 0x7bbdfee38400>]
+INFO: az_command_data_logger: exit code: 1
+INFO: cli.__main__: Command ran in 0.714 seconds (init: 0.126, invoke: 0.589)
+INFO: telemetry.main: Begin splitting cli events and extra events, total events: 1
+INFO: telemetry.client: Accumulated 0 events. Flush the clients.
+INFO: telemetry.main: Finish splitting cli events and extra events, cli events: 1
+INFO: telemetry.save: Save telemetry record of length 4141 in cache file under /home/baccassh/.azure/telemetry/20250618211647705
+INFO: telemetry.main: Begin creating telemetry upload process.
+INFO: telemetry.process: Creating upload process: "/opt/az/bin/python3 /opt/az/lib/python3.12/site-packages/azure/cli/telemetry/__init__.py /home/baccassh/.azure /home/baccassh/.azure/telemetry/20250618211647705"
+INFO: telemetry.process: Return from creating process 213005
+INFO: telemetry.main: Finish creating telemetry upload process.

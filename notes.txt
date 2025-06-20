@@ -1,0 +1,4 @@
+We have a working DockerPython function. 
+
+Need a .deploy.sh 
+That bootstraps the storage account 
